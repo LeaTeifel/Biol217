@@ -134,12 +134,30 @@ http://127.0.0.1:8060
 
 
 
--
 
- anvi-estimate-genome-completeness -p merged_profiles/PROFILE.db -c /work/sunam226/Day3/5_anvio_profiles/contigs.db --list-collections
+# Quality estimation
+
+- visualize results
+  - check collections
+
+        anvi-estimate-genome-completeness -p merged_profiles/PROFILE.db -c /work/sunam226/Day3/5_anvio_profiles/contigs.db --list-collections
+
+- not longer on front end on hpc
+
+        srun --reservation=biol217 --pty --mem=10G --nodes=1 --tasks-per-node=1 --cpus-per-task=1 --partition=all /bin/bash
+.
+
+        
+        conda activate /home/sunam225/miniconda3/miniconda4.9.2/usr/etc/profile.d/conda.sh/envs/anvio-7.1
+
+        anvi-interactive -p merged_profiles/PROFILE.db -c /home/sunam226/Day3/5_anvio_profiles/contigs.db -C METABAT
 
 
- anvi-interactive -p merged_profiles/PROFILE.db -c /home/sunam226/Day3/5_anvio_profiles/contigs.db -C METABAT
+
+
+----end----
+
+
 
 # how to save image
 ![image](./images/fc.jpeg)
