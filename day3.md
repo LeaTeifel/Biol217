@@ -40,7 +40,7 @@ conda activate /home/sunam226/.conda/envs/anvio
 #  Question:  
 - Please submit your generated figure and explain in your own words what you can see (keep it short).
   ![image](./images/graphcontigsday2.png)
-  -shows our contigs, colours represent different genomes
+  -
 - create sBatch script for metaquast
   
  sbatch: ![script](./scripts/metaquast.sh)
@@ -55,11 +55,10 @@ cp -r /home/sunam226/Day3/3_metaquast_out/* /work_beegfs/sunam235/day3/3_metaqua
     - What is your N50 value? Why is this value relevant?
             - N50 value: 2963
             - used to assess the contiguity of an assembly
-            - at least 50 % of contigs are equal or longer
     - How many contigs are assembled?
             - total number: 57414
     - What is the total length of the contigs?
-            - total length:
+            - total length: 
                        Total length (>= 0 bp)	145675865
                             Total length (>= 1000 bp)	145675865
                             Total length (>= 5000 bp)	54320345
@@ -121,10 +120,8 @@ http://127.0.0.1:8060
 - Binning with
   - Metabat2
   - Concoct 
-  - NOT WORKING
 
         cp /home/sunam226/Day3/5_anvio-profiles/SUMMARY*/*.html
-
 
 # Questions
 - Number of Archaea bins you got from MetaBAT2?
@@ -146,37 +143,21 @@ http://127.0.0.1:8060
         anvi-estimate-genome-completeness -p merged_profiles/PROFILE.db -c /work/sunam226/Day3/5_anvio_profiles/contigs.db --list-collections
 
 - not longer on front end on hpc
-  
-  ```
-    srun --reservation=biol217 --pty --mem=10G --nodes=1 --tasks-per-node=1 --cpus-per-task=1 --partition=all /bin/bash
 
-    conda activate /home/sunam225/miniconda3/miniconda4.9.2/usr/etc/profile.d/conda.sh/envs/anvio-7.1
+        srun --reservation=biol217 --pty --mem=10G --nodes=1 --tasks-per-node=1 --cpus-per-task=1 --partition=all /bin/bash
+.
 
-    anvi-interactive -p merged_profiles/PROFILE.db -c /home/sunam226/Day3/5_anvio_profiles/contigs.db -C METABAT
+        
+        conda activate /home/sunam225/miniconda3/miniconda4.9.2/usr/etc/profile.d/conda.sh/envs/anvio-7.1
 
-new Terminal
-
-      ssh -L 8060:localhost:8080 sunam235@caucluster-old.rz.uni-kiel.de
-      ssh -L 8080:localhost:8080 node010
-
-
-show completeness, only used METABAT collection
-
-![file](scripts/genomecompleteness_metabat.txt)
-
-
-# Questions Archaea
-
-- Which binning strategy gives you the best quality for the bins??
-    - dastool: merges both binners
-- How many bins do you get that are of High Quality? 
-    - 2
-
-    anvi-estimate-genome-completeness -c //work_beegfs/sunam235/day3/5_anvio_profiles/contigs.db -p /merged_profiles/PROFILE.db -C METABAT
+        anvi-interactive -p merged_profiles/PROFILE.db -c /home/sunam226/Day3/5_anvio_profiles/contigs.db -C METABAT
 
 
 
-![image](./images/binning.svg)
+
+----end----
+
+
 
 # how to save image
 ![image](./images/fc.jpeg)

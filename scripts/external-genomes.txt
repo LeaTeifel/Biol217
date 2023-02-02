@@ -1,9 +1,0 @@
-name	contigs_db_path
-Methano_Bin1	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin1.db
-Methano_Bin10	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin10.db
-Methano_Bin13	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin13.db
-Methano_Bin3	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin3.db
-Methano_Bin5	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin5.db
-Methano_Bin8	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin8.db
-Methano_Bin9	/work_beegfs/sunam235/Day6/02_contigs-dbs/Bin9.db
-Methano_Mflavescens	/work_beegfs/sunam235/Day6/02_contigs-dbs/Mflavescens.db
